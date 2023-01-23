@@ -1,0 +1,369 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+     font-size: 62.5%;
+}
+body {
+     font-family: 'Sofia Sans', sans-serif;
+}
+li {
+     list-style: none;
+}
+a {
+     text-decoration: none;
+     border-radius: 5px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* -------------------------------------------Header---------------------------------------------- */
+header {
+     height: 20%;
+     font-size:1.6rem;
+     font-weight:700;
+}
+.container{
+     width: 80%;
+     margin: 0 auto;
+}
+.logo { 
+     margin-top:1rem;
+     float:left;
+     padding-bottom: 10px;
+}
+nav {
+     float: right;
+}
+
+nav ul {
+     margin: 0;
+     padding: 0;
+}
+nav li {
+     display: inline-block;
+     margin-top:.5rem;
+     margin-left: 2rem;
+     margin-right: 1rem;
+     padding-top: 1.5rem;
+
+     position: relative;
+}
+
+
+header a:link {
+     color:black;
+}
+header a:visited {
+     color:black;
+} 
+
+nav a::before {
+     content: '';
+     display: block;
+     height: 5px;
+     width: 100%;
+     background-color: black;
+
+     position: absolute;
+     top: 0;
+     width: 0%;
+     transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+     width: 100%;
+}
+/*
+-----------------------------------------------Main------------------------------------------------------- */
+main {
+     background:url("../hairSalon-images/hero-image.jpg");
+     background-repeat:no-repeat;
+     background-size: 100%;  
+     height:900px;
+     font-size: 1.6rem;
+     padding-top: 15%;
+     color: white;
+     padding-left: 10%;
+}
+main h1 {
+     margin-top:0;
+     margin-bottom: 2%;
+     font-size: 10rem;
+     font-weight: 500;
+     width:60%; 
+}
+h1 + span{
+     font-size: 2.5rem;
+     width: 20%;
+     margin-bottom: 10%;
+}
+.button{
+     text-align:center;
+     display:block;
+     width:10%;
+     border:1px solid black;
+     background: black;
+     color:white;
+     margin-top:4%; 
+     height: 40px;
+     width: 13.8888%;
+     line-height:40px;
+     letter-spacing: 1.5px; 
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+     transition: ease-in-out 0.5s;
+}
+.button:hover{
+     background:white;
+     color:black;
+}
+.book_online:hover{
+     background:rgb(54, 54, 54);
+     color:white;
+     border:2px solid rgb(122, 121, 121);
+}
+
+
+
+
+/* --------------------------------------------------------INSERT--------------------------------------------------------------- */
+.insert{
+     margin-top: 7%;
+     display:flex;
+     flex-direction: column;
+     width: 30%;
+     background-color:black;
+     border-radius: 7px;
+     font-size: 1.75rem;
+     padding: 0 0 3% 3%;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.span1{
+     margin: 8% 0 5% 5%;
+}
+.span2{
+     margin: 0 0 3% 5%;
+}
+.span3{
+     margin: 0 0 5% 5%;
+}
+.spanPercentage {
+     font-size: 2.5rem;
+}
+.book_online{
+     width:70%;
+     background:white;
+     color:black;
+}
+
+/* ------------------------------------------------TRIAD SECTION-------------------------------------------- */
+.triad {
+     margin-top: 10%;
+     color:black;
+     display: flex;
+     justify-content: space-between;
+    
+}
+.triad section {
+     width:33.3333%;
+     margin: 0 5rem;
+}
+.triad section img {
+     display: inline-block;
+     margin:auto;
+}
+.triad p {
+     width: 50%;
+     text-align:left;
+       
+}
+/* ---------------------------------------------------VIDEO--------------------------------------------------------------- */
+
+.video{
+     width:111%;
+     height: 550px;
+     background: #F3F4F6;
+     padding-left: 0;
+     position:relative;
+     right:11%;
+     padding-left: 11%;
+     margin-top: 5%;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.video h2 {
+     font-size: 6rem;
+}
+
+.video section {
+     margin-top:3%;
+     color: black;
+     width: 50%;
+     float:left;
+     
+}
+#toniAndGuy{
+     margin-top:10%;
+}
+.video p {
+     width: 60%;
+     font-size:2.2rem;
+}
+.video > section a {
+     width: 30%;
+}
+
+/* -----------------------------------------Triad Two-------------------------------------------------------------------------- */
+.triadTwo {
+     margin: 10% auto 0 auto;
+     color:black;
+     display:flex;
+     justify-content: space-around;    
+     top:100px;
+     height: 73%;  
+     font-size: 2.5rem;   
+     width:90%; 
+}
+.triadTwo section {
+     margin-right: 3rem;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.triadTwo a {
+     width: 50%;
+     margin-left:20%;
+     display:inline-block;
+     position:relative;
+     bottom: 10%;
+}
+.triadTwo img {
+     width:100%;
+}
+
+/* ------------------------------------------Second Insert------------------------------------------------------ */
+.insert2 {
+     background: url("../hairSalon-images/Promo-Banner-Image.jpg");
+     background-size: cover;
+     font-size: 2rem;
+     height:80%;
+     width: 80%;
+     color: black;
+     margin-bottom: 10%;
+}
+ .insert2 span:nth-child(3) {
+     margin-bottom:10%;
+}
+.book_online2 {
+     width:70%;
+}
+.book_online2:hover {
+     background:white;
+     color:black;
+}
+/* -------------------------------Last Section------------------------------------------------------------------- */
+.lastSection {
+     height: 500px;
+     color:black;
+     font-size: 3rem;
+     font-weight:700;
+     text-align:center;
+     width: 60%;
+     position:relative;
+     margin-left: 10%;
+     bottom: 10%;
+}
+.lasSection span{
+     margin-bottom: 1rem;
+}
+.crazyPhotos {
+     margin-top: 1rem;
+     display:grid;
+     grid-template-columns: 1fr 1fr 1fr; 
+     grid-template-rows: 1fr 1fr 1fr;
+     column-gap: 1%;
+
+}
+.crazyImg {
+     width: 100%;
+     margin: 1%;
+     
+}
+/* .first {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 2;
+} */
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media all and (max-width:1193px) {
+     nav ul, nav a  {
+          display:none;
+     }
+     nav img {
+          margin-left:37.5%;
+          width:60%;
+          
+     }
+     html {
+          font-size: 31.25%
+     }
+     .services_btn{
+          margin-top:27%;
+     }
+     .button {
+          font-size: 3rem;
+          width:80%;
+     }
+     .insert {
+          text-align: center;
+          font-size: 3rem;
+          width: 80%;
+          height: 30%;
+          margin-bottom: 5rem;
+     }
+     .insert a{
+          display: inline-block;
+          margin: auto;
+     }
+     .insert span + span {
+          margin-bottom: 20px;
+     }
+     .triad {
+          display:block;
+          width: 80%;
+     }
+     .triad, .triad *{
+          text-align:center;
+     }
+     .triad p {
+          margin:auto;
+     }
+     .triad section {
+          width:100%;
+          margin-top: 10rem;
+     }
+
+}
