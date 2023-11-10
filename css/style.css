@@ -25,6 +25,7 @@ html {
 }
 body {
      font-family: 'Sofia Sans', sans-serif;
+     padding-bottom: 20em;
 }
 li {
      list-style: none;
@@ -281,7 +282,7 @@ h1 + span{
 }
 /* -------------------------------Last Section------------------------------------------------------------------- */
 .lastSection {
-     height: 500px;
+     height: 800px;
      color:black;
      font-size: 3rem;
      font-weight:700;
@@ -289,7 +290,9 @@ h1 + span{
      width: 60%;
      position:relative;
      margin-left: 10%;
+     margin-top:10%;
      bottom: 10%;
+     
 }
 .lasSection span{
      margin-bottom: 1rem;
@@ -298,9 +301,12 @@ h1 + span{
      margin-top: 1rem;
      display:grid;
      grid-template-columns: 33% 33% 33%; 
-     grid-template-rows: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
      column-gap: 1%;
      row-gap: 1%;
+     border: 1px solid red;
+
+     
 }
 .crazyImg img{
      width:100%;
